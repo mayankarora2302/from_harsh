@@ -62,7 +62,7 @@ export default function PasswordModal({ onClose, profileName }: PasswordModalPro
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className="w-full bg-netflix-gray text-white px-4 py-3 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-netflix-red"
-                        placeholder="Enter PIN"
+                        placeholder="Where we first travelled together?"
                         maxLength={8}
                         autoFocus
                     />
