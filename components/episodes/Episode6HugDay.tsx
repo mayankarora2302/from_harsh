@@ -2,20 +2,22 @@
 
 import { motion } from 'framer-motion';
 import MemoryGallery from '../MemoryGallery';
+import SoundBox from '../SoundBox';
 
 export default function Episode6HugDay() {
-    // TODO: PERSONALIZE - Add your comfort message
     const hugMessage = `
-    Your embrace is my sanctuary.
-    In your arms, the world fades away and only we remain.
-    Every hug is a reminder that I'm exactly where I belong.
+    The safest place in the world?
+    Right in your arms.
+    That's where my overthinking stops and peace begins.
+    I need one of those long hugs from you very soon ❤️
   `;
 
     const images = [
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.17 (1).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18.jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (1).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (2).jpeg',
+        '/assets/images/cb6c228d-ef41-4778-b8c0-4397a27255d8 2.JPG',
+        '/assets/images/96ea5b69-22a2-4bb9-b424-60f1f866b3ef 2.JPG',
+        '/assets/images/890d4fa1-167f-4ee3-aaad-fe2aab031773 2.JPG',
+        '/assets/images/f4964387-12e4-4456-90a0-aa39ac96db52 2.JPG',
+        '/assets/Videos/Balloon Chalange/2f6a7aef-ddae-4c60-91dc-5181db7f2b88 2.MP4',
     ];
 
     return (
@@ -56,6 +58,15 @@ export default function Episode6HugDay() {
                         Your heartbeat is my favorite lullaby
                     </p>
                 </div>
+            </div>
+
+            {/* Sound Box */}
+            <div className="max-w-2xl mx-auto">
+                <SoundBox
+                    audioSrc="/assets/audio/Nadaaniyan Akshath 128 Kbps.mp3"
+                    title="Our Song - Nadaaniyan"
+                    color="#F4A460"
+                />
             </div>
 
             {/* Embrace Gallery */}

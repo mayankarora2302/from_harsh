@@ -2,21 +2,22 @@
 
 import { motion } from 'framer-motion';
 import MemoryGallery from '../MemoryGallery';
+import SoundBox from '../SoundBox';
 
 export default function Episode7KissDay() {
-    // TODO: PERSONALIZE - Add your romantic message
     const kissMessage = `
-    Every kiss tells a story words cannot express.
-    In that moment, time stands still and the world disappears.
-    Your lips on mine—my favorite place to be.
+    Watching you smile is my favorite thing…
+    Being the reason for that smile is even better.
+    But today? I think I deserve interest on all the love I've invested 😏❤️
   `;
 
     const images = [
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (3).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (4).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (5).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (6).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.18 (7).jpeg',
+        '/assets/images/53db05de-389b-43c2-80fd-fc4151f865e8 2.JPG',
+        '/assets/images/da940164-341c-4697-8648-0bb96008ae6c 2.JPG',
+        '/assets/images/b1e82688-cbc3-43f6-8c3c-7639a6078033 2.JPG',
+        '/assets/images/4b803035-a8f3-48d7-9d72-6bc1e77b13d8 2.JPG',
+        '/assets/images/78a302c8-5fb2-4128-b7d6-219391aa588d 2.JPG',
+        '/assets/Videos/Bowling/3eb12ea3-9794-4315-82dd-e90dc4a8bb12 2.MP4',
     ];
 
     return (
@@ -95,6 +96,15 @@ export default function Episode7KissDay() {
                         </motion.div>
                     ))}
                 </div>
+            </div>
+
+            {/* Sound Box */}
+            <div className="max-w-2xl mx-auto">
+                <SoundBox
+                    audioSrc="/assets/audio/Tum Ho Toh-(Mr-Jat.in).mp3"
+                    title="Our Song - Tum Ho Toh"
+                    color="#DC143C"
+                />
             </div>
 
             {/* Polaroid Memories */}

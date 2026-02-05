@@ -2,20 +2,21 @@
 
 import { motion } from 'framer-motion';
 import MemoryGallery from '../MemoryGallery';
+import SoundBox from '../SoundBox';
 
 export default function Episode1RoseDay() {
-    // TODO: PERSONALIZE - Add your own love message
     const loveMessage = `
-    Like the first rose of spring, our love bloomed with gentle beauty.
-    Every petal tells a story, every thorn a lesson learned together.
-    You are my first bloom, my eternal spring.
+    Roses are beautiful… but they don't even come close to you.
+    Your smile fixes my worst days, your presence feels like home.
+    I don't need a bouquet… I just need you, always.
   `;
 
     const images = [
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.46.16.jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.46.16 (1).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.46.16 (2).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.15.jpeg',
+        '/assets/images/16102361-4fc8-4351-b5a8-f842e65eda30.JPG',
+        '/assets/images/355c0de7-d567-4675-a5c0-e7e8d4f32b26.JPG',
+        '/assets/images/3b37cc17-107b-4529-b5e1-7d8541b7f787.JPG',
+        '/assets/images/3e735fe3-5fb9-48ee-a426-e34eb193729f.JPG',
+        '/assets/Videos/Bowling/3eb12ea3-9794-4315-82dd-e90dc4a8bb12 2.MP4',
     ];
 
     return (
@@ -61,6 +62,15 @@ export default function Episode1RoseDay() {
                     ))}
                 </div>
             </motion.div>
+
+            {/* Sound Box */}
+            <div className="max-w-2xl mx-auto">
+                <SoundBox
+                    audioSrc="/assets/audio/Nadaaniyan Akshath 128 Kbps.mp3"
+                    title="Our Song - Nadaaniyan"
+                    color="#FF6B9D"
+                />
+            </div>
 
             {/* Memory Gallery */}
             <MemoryGallery images={images} title="Our Rose Garden of Memories" />

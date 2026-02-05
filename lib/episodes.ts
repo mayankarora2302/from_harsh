@@ -20,7 +20,7 @@ export const episodes: Episode[] = [
         subtitle: "The First Bloom",
         theme: "Soft, romantic, hopeful",
         releaseDate: new Date('2026-02-07'),
-        coverImage: '/assets/images/episode1-cover.jpg',
+        coverImage: '/assets/images/3b37cc17-107b-4529-b5e1-7d8541b7f787.JPG',
         description: "Where it all began - the first petals of our love story unfold with tender moments and sweet beginnings.",
         duration: "12 min",
         color: "#FF6B9D",
@@ -32,7 +32,7 @@ export const episodes: Episode[] = [
         subtitle: "The Almost Proposal",
         theme: "Emotional, dramatic",
         releaseDate: new Date('2026-02-08'),
-        coverImage: '/assets/images/episode2-cover.jpg',
+        coverImage: '/assets/images/16102361-4fc8-4351-b5a8-f842e65eda30.JPG',
         description: "A cinematic moment of vulnerability and courage - when words became promises and dreams took shape.",
         duration: "15 min",
         color: "#C41E3A",
@@ -44,7 +44,7 @@ export const episodes: Episode[] = [
         subtitle: "Sweet Like Us",
         theme: "Warm, cozy, indulgent",
         releaseDate: new Date('2026-02-09'),
-        coverImage: '/assets/images/episode3-cover.jpg',
+        coverImage: '/assets/images/da940164-341c-4697-8648-0bb96008ae6c 2.JPG',
         description: "Indulge in the sweetness of our memories - every moment as delightful as the finest chocolate.",
         duration: "10 min",
         color: "#7B3F00",
@@ -56,7 +56,7 @@ export const episodes: Episode[] = [
         subtitle: "Comfort Episode",
         theme: "Cute, comforting, wholesome",
         releaseDate: new Date('2026-02-10'),
-        coverImage: '/assets/images/episode4-cover.jpg',
+        coverImage: '/assets/images/88f29ba4-8039-464e-82c5-1790a038c8ff 2.JPG',
         description: "Wrapped in warmth and laughter - the cozy moments that make our love feel like home.",
         duration: "11 min",
         color: "#D4A574",
@@ -68,7 +68,7 @@ export const episodes: Episode[] = [
         subtitle: "The Vow Episode",
         theme: "Emotional, deep, sincere",
         releaseDate: new Date('2026-02-11'),
-        coverImage: '/assets/images/episode5-cover.jpg',
+        coverImage: '/assets/images/355c0de7-d567-4675-a5c0-e7e8d4f32b26.JPG',
         description: "Sacred vows written in the language of forever - promises that bind our hearts across time.",
         duration: "14 min",
         color: "#4A5568",
@@ -80,7 +80,7 @@ export const episodes: Episode[] = [
         subtitle: "Safe Place",
         theme: "Warm, healing, emotional",
         releaseDate: new Date('2026-02-12'),
-        coverImage: '/assets/images/episode6-cover.jpg',
+        coverImage: '/assets/images/78a302c8-5fb2-4128-b7d6-219391aa588d 2.JPG',
         description: "In your arms, I found my sanctuary - where every embrace tells a story of belonging.",
         duration: "13 min",
         color: "#F4A460",
@@ -92,7 +92,7 @@ export const episodes: Episode[] = [
         subtitle: "The Moment",
         theme: "Passionate, romantic",
         releaseDate: new Date('2026-02-13'),
-        coverImage: '/assets/images/episode7-cover.jpg',
+        coverImage: '/assets/images/4bbaf41e-0842-4192-85b6-5960311740f2 2.JPG',
         description: "Stolen moments and lingering touches - when time stands still and hearts speak without words.",
         duration: "12 min",
         color: "#DC143C",
@@ -104,31 +104,23 @@ export const episodes: Episode[] = [
         subtitle: "Season Finale - Part 1",
         theme: "Grand, emotional, unforgettable",
         releaseDate: new Date('2026-02-14'),
-        coverImage: '/assets/images/episode8-cover.jpg',
+        coverImage: '/assets/images/3e735fe3-5fb9-48ee-a426-e34eb193729f.JPG',
         description: "The grand celebration of our love - a cinematic finale that honors every moment we've shared.",
         duration: "20 min",
         color: "#E50914",
         soundtrack: '/assets/audio/episode8.mp3',
     },
-    {
-        id: 9,
-        title: "Episode 9: Anniversary",
-        subtitle: "Season Finale - Part 2",
-        theme: "Grand, emotional, unforgettable",
-        releaseDate: new Date('2026-02-15'),
-        coverImage: '/assets/images/episode9-cover.jpg',
-        description: "Our love story continues - celebrating the day that changed everything and looking forward to forever.",
-        duration: "25 min",
-        color: "#FF1744",
-        soundtrack: '/assets/audio/episode9.mp3',
-    },
 ];
 
 export function isEpisodeUnlocked(episode: Episode): boolean {
-    // Temporarily unlocked - all episodes are accessible
-    return true;
-    // const now = new Date();
-    // return now >= episode.releaseDate;
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    // Normalize release date to midnight for accurate comparison
+    const normalizedReleaseDate = new Date(episode.releaseDate);
+    normalizedReleaseDate.setHours(0, 0, 0, 0);
+
+    return now >= normalizedReleaseDate;
 }
 
 export function getNextEpisode(currentId: number): Episode | null {

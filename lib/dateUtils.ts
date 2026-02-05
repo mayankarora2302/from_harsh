@@ -1,4 +1,4 @@
-export const RELATIONSHIP_START_DATE = new Date('2024-02-15'); // TODO: PERSONALIZE - Update with your actual relationship start date
+export const RELATIONSHIP_START_DATE = new Date('2025-04-14'); // Together since April 14, 2025
 
 export function formatDuration(startDate: Date): {
     years: number;

@@ -2,21 +2,21 @@
 
 import { motion } from 'framer-motion';
 import MemoryGallery from '../MemoryGallery';
+import SoundBox from '../SoundBox';
 
 export default function Episode2ProposeDay() {
-    // TODO: PERSONALIZE - Add your own proposal message/monologue
     const proposalMonologue = `
-    From the moment I met you, I knew my life would never be the same.
-    You are my sunrise, my sunset, and every beautiful moment in between.
-    With you, I've found my home, my peace, my forever.
-    Will you continue this journey with me, hand in hand, heart to heart?
+    I want to propose to you again… not just today, but every day.
+    I choose you in every mood, every version — cute, angry, teasing, all of you.
+    Just promise me one thing… never log out of my life ❤️
   `;
 
     const images = [
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.15 (1).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.15 (2).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.15 (3).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.15 (4).jpeg',
+        '/assets/images/53db05de-389b-43c2-80fd-fc4151f865e8 2.JPG',
+        '/assets/images/c511944b-258a-4d2b-8784-8c138effa8c9 2.JPG',
+        '/assets/images/db6638af-9ca3-42cd-a919-30bca85ee1b4 2.JPG',
+        '/assets/images/5eed6d87-80bd-46e2-ac52-859086969df9 2.JPG',
+        '/assets/Videos/Badminton/5dc61821-89fd-4f2e-9357-a9e2eb720853 2.MP4',
     ];
 
     return (
@@ -43,6 +43,15 @@ export default function Episode2ProposeDay() {
                     {proposalMonologue}
                 </motion.div>
             </motion.div>
+
+            {/* Sound Box */}
+            <div className="max-w-2xl mx-auto">
+                <SoundBox
+                    audioSrc="/assets/audio/Tum Ho Toh-(Mr-Jat.in).mp3"
+                    title="Our Song - Tum Ho Toh"
+                    color="#C41E3A"
+                />
+            </div>
 
             {/* Flashback Memory Reel */}
             <div className="space-y-4">

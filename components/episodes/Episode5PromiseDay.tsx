@@ -2,22 +2,22 @@
 
 import { motion } from 'framer-motion';
 import MemoryGallery from '../MemoryGallery';
+import SoundBox from '../SoundBox';
 
 export default function Episode5PromiseDay() {
-    // TODO: PERSONALIZE - Add your actual promises
     const promises = [
-        "I promise to love you in your highs and hold you in your lows",
-        "I promise to be your biggest cheerleader and your safest space",
-        "I promise to choose you, every single day, for the rest of my life",
-        "I promise to build a life with you that's filled with laughter and love",
-        "I promise to never let a day go by without reminding you how special you are",
+        'I promise - no matter how hard days get, no matter the mood or stress,',
+        'I will always stay by your side.',
+        'Your smile is my responsibility.',
+        'And your right over me? Lifetime access granted.',
     ];
 
     const images = [
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.16 (3).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.16 (4).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.16 (5).jpeg',
-        '/assets/images/WhatsApp Image 2026-02-01 at 20.47.17.jpeg',
+        '/assets/images/4b803035-a8f3-48d7-9d72-6bc1e77b13d8 2.JPG',
+        '/assets/images/583da941-6883-4734-a036-022859f6e11a 2.JPG',
+        '/assets/images/88f29ba4-8039-464e-82c5-1790a038c8ff 2.JPG',
+        '/assets/images/487a82e6-9db9-4a90-9acb-ddd9afdccf71 2.JPG',
+        '/assets/Videos/Table Football/0e2ccd24-6c7b-4542-8e72-7e40188a950b 2.MP4',
     ];
 
     return (
@@ -54,6 +54,15 @@ export default function Episode5PromiseDay() {
                         </div>
                     </motion.div>
                 ))}
+            </div>
+
+            {/* Sound Box */}
+            <div className="max-w-2xl mx-auto">
+                <SoundBox
+                    audioSrc="/assets/audio/WhatsApp Audio 2026-02-05 at 14.37.23.opus"
+                    title="Promise Message"
+                    color="#4A5568"
+                />
             </div>
 
             {/* Memory Gallery */}

@@ -14,6 +14,10 @@ export default function MemoryGallery({ images, title = 'Our Memories' }: Memory
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [errorImages, setErrorImages] = useState<Set<number>>(new Set());
 
+    const isVideo = (url: string) => {
+        return url.toLowerCase().endsWith('.mp4') || url.toLowerCase().endsWith('.mov') || url.toLowerCase().endsWith('.webm');
+    };
+
     const openLightbox = (image: string, index: number) => {
         if (errorImages.has(index)) return;
         setSelectedImage(image);
@@ -73,14 +77,28 @@ export default function MemoryGallery({ images, title = 'Our Memories' }: Memory
                         onClick={() => openLightbox(image, index)}
                         className="relative aspect-square rounded-lg overflow-hidden cursor-pointer netflix-shadow group bg-netflix-gray"
                     >
-                        <Image
-                            src={image}
-                            alt={`Memory ${index + 1}`}
-                            fill
-                            unoptimized
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
-                            onError={() => handleImageError(index)}
-                        />
+                        {isVideo(image) ? (
+                            <>
+                                <video
+                                    src={image}
+                                    className="w-full h-full object-cover"
+                                    muted
+                                    playsInline
+                                />
+                                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                    <span className="text-6xl">▶️</span>
+                                </div>
+                            </>
+                        ) : (
+                            <Image
+                                src={image}
+                                alt={`Memory ${index + 1}`}
+                                fill
+                                unoptimized
+                                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                                onError={() => handleImageError(index)}
+                            />
+                        )}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
                             <span className="text-4xl opacity-0 group-hover:opacity-100 transition-opacity">
                                 🔍
@@ -134,13 +152,22 @@ export default function MemoryGallery({ images, title = 'Our Memories' }: Memory
                             onClick={(e) => e.stopPropagation()}
                             className="relative max-w-4xl max-h-[90vh] w-full h-full"
                         >
-                            <Image
-                                src={selectedImage}
-                                alt="Selected memory"
-                                fill
-                                unoptimized
-                                className="object-contain"
-                            />
+                            {isVideo(selectedImage) ? (
+                                <video
+                                    src={selectedImage}
+                                    controls
+                                    autoPlay
+                                    className="w-full h-full object-contain"
+                                />
+                            ) : (
+                                <Image
+                                    src={selectedImage}
+                                    alt="Selected memory"
+                                    fill
+                                    unoptimized
+                                    className="object-contain"
+                                />
+                            )}
                         </motion.div>
 
                         <div className="absolute bottom-4 text-white text-sm">

@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { episodes, isEpisodeUnlocked } from '@/lib/episodes';
-import AudioPlayer from '@/components/AudioPlayer';
 import Navbar from '@/components/Navbar';
 import LightLeaks from '@/components/effects/LightLeaks';
 
@@ -18,7 +17,6 @@ import Episode5PromiseDay from '@/components/episodes/Episode5PromiseDay';
 import Episode6HugDay from '@/components/episodes/Episode6HugDay';
 import Episode7KissDay from '@/components/episodes/Episode7KissDay';
 import Episode8Valentine from '@/components/episodes/Episode8Valentine';
-import Episode9Anniversary from '@/components/episodes/Episode9Anniversary';
 
 const episodeComponents = {
     1: Episode1RoseDay,
@@ -29,7 +27,6 @@ const episodeComponents = {
     6: Episode6HugDay,
     7: Episode7KissDay,
     8: Episode8Valentine,
-    9: Episode9Anniversary,
 };
 
 export default function EpisodePage({ params }: { params: { id: string } }) {
@@ -115,11 +112,6 @@ export default function EpisodePage({ params }: { params: { id: string } }) {
 
             {/* Episode Content */}
             <div className="relative z-20 px-4 md:px-12 py-12 max-w-7xl mx-auto">
-                {/* Audio Player */}
-                <div className="mb-12">
-                    <AudioPlayer audioSrc={episode.soundtrack} episodeTitle={episode.title} />
-                </div>
-
                 {/* Episode-Specific Content */}
                 {EpisodeComponent && <EpisodeComponent />}
             </div>
