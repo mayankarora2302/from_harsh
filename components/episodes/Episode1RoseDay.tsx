@@ -13,7 +13,6 @@ export default function Episode1RoseDay() {
 
     const images = [
         '/assets/images/16102361-4fc8-4351-b5a8-f842e65eda30.JPG',
-        '/assets/images/355c0de7-d567-4675-a5c0-e7e8d4f32b26.JPG',
         '/assets/images/3b37cc17-107b-4529-b5e1-7d8541b7f787.JPG',
         '/assets/images/3e735fe3-5fb9-48ee-a426-e34eb193729f.JPG',
         '/assets/Videos/Bowling/3eb12ea3-9794-4315-82dd-e90dc4a8bb12 2.MP4',
